@@ -1,3 +1,48 @@
 footer {
     text-align: center;
+    font-family: Lemon;
+    font-weight: 500;
+}
+body {
+
+}
+
+.container {
+    font-family: Lemon;
+    font-family: 500;
+    max-width: 600px;
+    margin: 60px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:10px;
+    background: white;
+}
+select {
+   font-family: Lemon; 
+   display: block;
+   width: 100%;
+   padding: 10px;
+   border-radius: 4px;
+}
+
+.city {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-bottom: 1px dashed grey;
+    padding:20px 0;
+}
+.city:last-child{
+    border:none;
+}
+.time small {
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 36px;
+}
+.date {
+    opacity:0.7;
+}
+h2 {
+    margin: 0 0 5px;
+    font-size: 28px;
 }
