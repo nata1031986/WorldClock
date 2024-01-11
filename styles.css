@@ -1,66 +1,74 @@
-body {
-    background-color: black;
-    background-size: cover;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
    font-family: 'Lemon', sans-serif;
-      margin: 60px auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius: 10px;
-    background: white;
-    padding: 20px 25px 25px 20px;
-}
-select {
-   font-family: Lemon; 
-   display: block;
-   width: 100%;
-   padding: 10px;
-   border-radius: 4px;
 }
 
 .city {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    border-bottom: 1px dashed grey;
-    padding:20px 0;
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-.city:last-child{
-    border:none;
+
+.city:last-child {
+  border: none;
 }
-.time small {
-    font-size: 18px;
-    vertical-align: middle;
-    line-height: 36px;
-}
+
 .date {
-    opacity:0.7;
+  opacity: 0.7;
 }
-h2 {
-    margin: 0 0 5px;
-    font-size: 28px;
+
+.time {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 24px;
+  vertical-align: middle;
+  line-height: 48px;
 }
 
 footer {
-    text-align: center;
-    font-family: Lemon;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Lemon', sans-serif;
 }
 i {
     font-size: large;
     color: gray;
-    transition: color 0.3s; /* Add a smooth transition for the color change */
+    transition: color 0.3s, transform 0.3s; 
 }
 
 i:hover {
-  
-    color: grey; /* Keep the same color on hover */
-    text-shadow: 0 0 10px #79c2d0, 0 0 20px #79c2d0, 0 0 30px #79c2d0; /* Adjust the values for the desired glow effect */
-} 
-
+    color: grey;
+    text-shadow: 0 0 10px gray, 0 0 20px gray;
+    transform: scale(1.5); 
+}
