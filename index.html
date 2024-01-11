@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.44/moment-timezone-with-data-1970-2030.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <script src="https://kit.fontawesome.com/823caa4f71.js" crossorigin="anonymous"></script>
    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Noto+Sans+JP:wght@400&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
@@ -19,14 +20,14 @@
           <option value="">Kyiv</option>
            <option value="">Chicago</option>
     </select>
-    <div class="city">
+    <div class="city" id = "Kyiv">
         <div>
         <h2>Kyiv</h2>
         <div class="date">Jan, 9th 2024</div>
         </div> 
         <div class="time">3:00:00<small>PM</small></div>
     </div>
-    <div class="city">
+    <div class="city" id = "chicago">
         <div>
         <h2>Chicago</h2>
         <div class="date">Jan, 9th 2024</div>
@@ -43,6 +44,8 @@
     </footer>
 
 
-    <script src="javascript/index.js"></script>
+  <script src="index.js"></script>
+
+    
 </body>
 </html>
