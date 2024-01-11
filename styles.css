@@ -1,21 +1,19 @@
-footer {
-    text-align: center;
-    font-family: Lemon;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
-}
 body {
-
+    background-color: black;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
-    font-family: Lemon;
-    font-family: 500;
-    max-width: 600px;
-    margin: 60px auto;
+   font-family: 'Lemon', sans-serif;
+      margin: 60px auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius:10px;
+    border-radius: 10px;
     background: white;
+    padding: 20px 25px 25px 20px;
 }
 select {
    font-family: Lemon; 
@@ -47,3 +45,22 @@ h2 {
     margin: 0 0 5px;
     font-size: 28px;
 }
+
+footer {
+    text-align: center;
+    font-family: Lemon;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+}
+i {
+    font-size: large;
+    color: gray;
+    transition: color 0.3s; /* Add a smooth transition for the color change */
+}
+
+i:hover {
+  
+    color: grey; /* Keep the same color on hover */
+    text-shadow: 0 0 10px #79c2d0, 0 0 20px #79c2d0, 0 0 30px #79c2d0; /* Adjust the values for the desired glow effect */
+} 
+
