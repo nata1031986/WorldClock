@@ -4,48 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.44/moment-timezone-with-data-1970-2030.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <script src="https://kit.fontawesome.com/823caa4f71.js" crossorigin="anonymous"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Noto+Sans+JP:wght@400&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/823caa4f71.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Noto+Sans+JP:wght@400&family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>TickleTime Zones</title>
 </head>
 <body>
     <div class="container">
-    <h3 class = "text-center font-monospace mt-2">TickleTime Zones</h3>
-    <select>
-       
-         <option value="">Select a city...</option>
-          <option value="">Kyiv</option>
-           <option value="">Chicago</option>
-    </select>
-    <div class="city" id = "Kyiv">
-        <div>
-        <h2>Kyiv</h2>
-        <div class="date">Jan, 9th 2024</div>
-        </div> 
-        <div class="time">3:00:00<small>PM</small></div>
+        <div class="card">
+            <h3 class="text-center font-monospace mt-2">TickleTime Zones🕒</h3>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <select class="form-control mt-3">
+                        <option value="">Select a city...</option>
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Sacramento">Sacramento</option>
+                        <option value="Toronto">Toronto</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="city">
+                        <div>
+                            <h2 id="Kyiv">Kyiv</h2>
+                            <div class="date">Jan 9th, 2024</div>
+                        </div>
+                        <div class="time">3:00:00<small>PM</small></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="city">
+                        <div>
+                            <h2 id="Chicago">Chicago</h2>
+                            <div class="date">Jan 9th, 2024</div>
+                        </div>
+                        <div class="time">3:00:00<small>PM</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="city" id = "chicago">
-        <div>
-        <h2>Chicago</h2>
-        <div class="date">Jan, 9th 2024</div>
-        </div> 
-        <div class="time">3:00:00<small>PM</small></div>
-    </div>
-</div>
-
-   <footer>
-    It was coded by Tasha
-    <a href="https://github.com/nata1031986/WorldClock" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
+    <footer class="text-center mt-5">
+        It was coded by Tasha
+        <a href="https://github.com/nata1031986/WorldClock" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
     </footer>
 
-
-  <script src="index.js"></script>
-
-    
+    <script src="index.js"></script>
 </body>
 </html>

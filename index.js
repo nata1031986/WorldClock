@@ -1,17 +1,32 @@
-setInterval(function() {
+function updateTime() {
+  // Los Angeles
+  let losAngelesElement = document.querySelector("#los-angeles");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
 
-let kyivElement = document.querySelector("kyiv");
-let kyivDateElement = kyivElement.querySelector(".date");
-let kyivTimeElement = kyivElement.querySelector(".time")
-let KyivTime = moment().tz("Europe/Kyiv");
-kyivDateElement.innerHTML = KyivTime.format("MMMM Do YYYY SS")
-kyivTimeElement.innerHTML =kyivTime.format('h:mm:ss [<small>]A[</small>]');
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
+    lostAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-let chicagoElement = document.querySelector("chicago");
-let chicagoDateElement = chicagoElement.querySelector(".date");
-let chicagoTimeElement = chicagoElement.querySelector(".time")
-let chicagoTime = moment().tz("America/Chicago");
-chicagoDateElement.innerHTML = chicagoTime.format("MMMM Do YYYY SS")
-chicagoTimeElement.innerHTML =chicagoTime.format('h:mm:ss SS [<small>]A[</small>]');
+  // Paris
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("Europe/Paris");
 
-}, 10000);
+    parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
