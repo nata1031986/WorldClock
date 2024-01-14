@@ -20,7 +20,7 @@ function updateTime() {
     }
 }
 
-let citiesSelectElement = document.querySelector("#citySelect");
+let citiesSelectElement = document.querySelector("#citiesSelect");
 citiesSelectElement.addEventListener("change", updateTime);
 
 updateTime();
