@@ -20,8 +20,8 @@ function updateTime() {
     }
 }
 
-let citiesSelectElement = document.querySelector("#citySelect"); 
-citiesSelectElement.addEventListener("change", updateTime); 
+let citiesSelectElement = document.querySelector("#citySelect");
+citiesSelectElement.addEventListener("change", updateTime);
 
 updateTime();
 setInterval(updateTime, 1000);
