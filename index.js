@@ -20,7 +20,7 @@ function updateTime() {
   }
 }
 
-let citiesSelectElement = document.querySelector("#citySelect"); // Corrected ID
+let citiesSelectElement = document.querySelector("#city"); // Corrected ID
 citiesSelectElement.addEventListener("change", updateTime); // Corrected function name
 
 updateTime();
