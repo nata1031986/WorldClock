@@ -1,32 +1,54 @@
-function updateTime() {
-  // Los Angeles
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+document.addEventListener('DOMContentLoaded', function () {
+    // Wait for the document to be fully loaded
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-    lostAngelesTimeElement.innerHTML = losAngelesTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
-  }
+    // Get references to the elements
+    const citySelect = document.getElementById('citySelect');
+    const cityNameElement = document.getElementById('cityName');
+    const cityInfoElement = document.getElementById('cityInfo');
+    const cityDateElement = document.getElementById('cityDate');
+    const cityTimeElement = document.getElementById('cityTime');
 
-  // Paris
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
+    // Add event listener to the city dropdown
+    citySelect.addEventListener('change', function () {
+        // Get the selected city
+        const selectedCity = citySelect.value;
 
-    parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
-  }
-}
-updateTime();
-setInterval(updateTime, 1000);
+        // Update the displayed information based on the selected city
+        updateCityInfo(selectedCity);
+    });
 
-let citiesSelectElement = document.querySelector("#city");
-citiesSelectElement.addEventListener("change", updateCity);
+    // Function to update city information
+    function updateCityInfo(city) {
+        switch (city) {
+            case 'Kyiv':
+                updateCityInfoDetails('Kyiv', 'Ukraine', 'Europe/Kiev');
+                break;
+            case 'Chicago':
+                updateCityInfoDetails('Chicago', 'USA', 'America/Chicago');
+                break;
+            case 'Sacramento':
+                updateCityInfoDetails('Sacramento', 'USA', 'America/Los_Angeles');
+                break;
+            case 'Toronto':
+                updateCityInfoDetails('Toronto', 'Canada', 'America/Toronto');
+                break;
+            default:
+                // Handle the default case or no city selected
+                cityNameElement.textContent = '';
+                cityInfoElement.textContent = '';
+                cityDateElement.textContent = '';
+                cityTimeElement.textContent = '';
+                break;
+        }
+    }
+
+    // Function to update city details using moment.js
+    function updateCityInfoDetails(city, country, timeZone) {
+        const now = moment().tz(timeZone);
+
+        cityNameElement.textContent = `${city}, ${country}`;
+        cityInfoElement.textContent = `Additional city information for ${city}`;
+        cityDateElement.textContent = now.format('MMM D, YYYY');
+        cityTimeElement.textContent = now.format('h:mm:ss A');
+    }
+});
