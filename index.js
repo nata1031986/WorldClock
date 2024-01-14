@@ -1,4 +1,5 @@
-function updateTime() {
+document.addEventListener('DOMContentLoaded', function() {
+  function updateTime() {
     let chicagoElement = document.querySelector("#chicago");
     if (chicagoElement) {
         let chicagoDateElement = chicagoElement.querySelector(".date");
@@ -18,10 +19,11 @@ function updateTime() {
         kievDateElement.innerHTML = kievTime.format("MMMM Do YYYY");
         kievTimeElement.innerHTML = kievTime.format("h:mm:ss [<small>]A[</small>]");
     }
-}
+  }
 
-let citiesSelectElement = document.querySelector("#citiesSelect");
-citiesSelectElement.addEventListener("change", updateTime);
+  let citiesSelectElement = document.querySelector("#citiesSelect");
+  citiesSelectElement.addEventListener("change", updateTime);
 
-updateTime();
-setInterval(updateTime, 1000);
+  updateTime();
+  setInterval(updateTime, 1000);
+});
