@@ -1,5 +1,4 @@
 function updateTime() {
- 
   let chicagoElement = document.querySelector("#chicago");
   if (chicagoElement) {
     let chicagoDateElement = chicagoElement.querySelector(".date");
@@ -9,7 +8,6 @@ function updateTime() {
     chicagoDateElement.innerHTML = chicagoTime.format("MMMM Do YYYY");
     chicagoTimeElement.innerHTML = chicagoTime.format("h:mm:ss [<small>]A[</small>]");
   }
-
 
   let kievElement = document.querySelector("#kiev");
   if (kievElement) {
@@ -22,8 +20,9 @@ function updateTime() {
   }
 }
 
-let citiesSelectElement = document.querySelector("#city");
-citiesSelectElement.addEventListener("change", updateCity);
+let citiesSelectElement = document.querySelector("#citySelect"); // Corrected ID
+citiesSelectElement.addEventListener("change", updateTime); // Corrected function name
 
 updateTime();
 setInterval(updateTime, 1000);
+
