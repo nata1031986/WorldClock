@@ -28,6 +28,14 @@ h2 {
   color: #455d7a;
 }
 
+.city {
+  
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -67,6 +75,7 @@ i:hover {
     text-shadow: 0 0 10px gray, 0 0 20px gray;
     transform: scale(1.5); 
 }
+
 @media (max-width: 768px) {
   .time {
     font-size: 20px; 
@@ -80,4 +89,3 @@ i:hover {
 
   
   }
-
