@@ -6,7 +6,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 5px;
+ 
   font-size: 28px;
 }
 .select {
@@ -67,3 +67,17 @@ i:hover {
     text-shadow: 0 0 10px gray, 0 0 20px gray;
     transform: scale(1.5); 
 }
+@media (max-width: 768px) {
+  .time {
+    font-size: 20px; 
+  }
+  .time small {
+    font-size:20px ;
+  }
+  .ua {
+    font-size: 20px;;
+  }
+
+  
+  }
+
